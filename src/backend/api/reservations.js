@@ -10,8 +10,13 @@ router.get("/", async (request, response) => {
     const availableMeals = await knex.raw(
       "SELECT meal.*,sum(reservation.number_of_guests) Total FROM meal INNER JOIN reservation on meal.id = reservation.meal_id GROUP BY meal.id HAVING Total < max_reservations"
     );
+    if(availableMeals.length===0){
+      response.json("Reservations are booked");
+    }
+    else{
     
     response.json(availableMeals[0]);
+    }
   } catch (error) {
     throw error;
   }
