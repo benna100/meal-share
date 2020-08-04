@@ -16,7 +16,16 @@ console.log(meals);
             <div class="form-group">
                 <label>meal_id</label>
                 <input class="form-control" type="number" name="meal_id" value = "${meal.id}" />
-              </div>`
+              </div>
+              <div class="form-group">
+                  <label>created_date</label>
+                  <input class="form-control" type="text" name="created_date" value = "${meal.created_date}"/>
+                  </div>
+                  <div class="form-group">
+                  <label>location</label>
+                  <input class="form-control" type="text" name="location" value= "${meal.location}"/>
+                  
+                </div>`
    });
   }
 window.handleMealRequest = async (params) => {
@@ -99,11 +108,11 @@ window.handleMealRequest = async (params) => {
                   <label>number_of_guests</label>
                   <input class="form-control" type="number" name="number_of_guests" min="1" max="20" placeholder="Choose a number from list" />
                 </div>
-                <div class="form-group">
+                <!---<div class="form-group">
                   <label>created_date</label>
                   <input class="form-control" type="text" name="created_date" placeholder="yyyy-mm-dd"/>
                   
-                </div>
+                </div>--->
               <div class="form-group">
                 <button class="btn btn-primary">Submit</button>
               </div>
