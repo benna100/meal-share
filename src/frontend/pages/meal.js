@@ -10,22 +10,10 @@ console.log(meals);
     </div>
     <div class="content-wrapper">
     <h4>${meal.title}</h4><br>
-    <p>${meal.description}<br><br>Price:${meal.price}</p>
+    <p>${meal.description}<br><br>Price: ${meal.price}<br><br>Date and time: ${meal.created_date}<br><br>Location: ${meal.location}</p>
     <div class="web-form">
     <form action="../../api/reservations" method="post">
-            <div class="form-group">
-                <label>meal_id</label>
-                <input class="form-control" type="number" name="meal_id" value = "${meal.id}" />
-              </div>
-              <div class="form-group">
-                  <label>created_date</label>
-                  <input class="form-control" type="text" name="created_date" value = "${meal.created_date}"/>
-                  </div>
-                  <div class="form-group">
-                  <label>location</label>
-                  <input class="form-control" type="text" name="location" value= "${meal.location}"/>
-                  
-                </div>`
+     `
    });
   }
 window.handleMealRequest = async (params) => {
