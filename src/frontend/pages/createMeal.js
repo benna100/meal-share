@@ -88,7 +88,7 @@ window.handleCreateMealRequest = async() => {
                 </div>
                 <div class="form-group">
                   <label>when</label>
-                  <input class="form-control" type="text" name="when" placeholder="yyyy/mm/dd"/>
+                  <input class="form-control" type="text" name="when" placeholder="yyyy/mm/dd hh/mm/ss"/>
                 </div>
                 <div class="form-group">
                   <label>created_date</label>
